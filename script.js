@@ -6,53 +6,57 @@ function validateForm() {
   const phone = document.getElementById("phone").value;
   const aadhar = document.getElementById("aadhar").value;
   const address = document.getElementById("address").value;
-
+   str="";
   // Basic validation
   if (name === "") {
-    alert("Please enter your name.");
-    return false;
+    str+=("Please enter your name.\n");
+    //return false;
   }
 
   if (dob === "") {
-    alert("Please enter your Date of Birth address.");
-    return false;
+    str+=("Please enter your Date of Birth address.\n");
+   // return false;
   }
 
   if (gender === "") {
-    alert("Please select your gender.");
-    return false;
+    str+=("Please select your gender.\n");
+    //return false;
   }
   
   if (email === "") {
-    alert("Please enter your email address.");
-    return false;
+    str+=("Please enter your email address.\n");
+   // return false;
   }
   if (!isValidEmail(email)) {
-    alert("Please enter a valid email address.");
-    return false;
+    str+=("Please enter a valid email address.\n");
+   // return false;
 
   }
   
 
   if (phone === "") {
-    alert("Please enter your phone number.");
-    return false;
+    str+=("Please enter your phone number.\n");
+    //return false;
   }
 
   if (aadhar === "") {
-    alert("please enter your aadhara Number");
-    return false;
+    str+=("please enter your aadhara Number\n");
+    //return false;
   }
   
   if (address === "") {
-    alert("Please enter your Address .");
+    str+=("Please enter your Address .\n");
+    //return false;
+  }
+  if(str!="")
+  {
+    alert(str);
     return false;
   }
 
 
   // Additional validation (e.g., date range, room availability) can be added here
-
-  return true;
+   document.getElementById("f1").submit();
 }
 
 function isValidEmail(email) {
